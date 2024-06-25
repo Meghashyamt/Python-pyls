@@ -1,6 +1,7 @@
 # Python-pyls
 
 **pyproject.toml**
+
 Create a pyproject.toml file in your project directory with the following content:
 
 
