@@ -4,7 +4,7 @@
 
 Create a pyproject.toml file in your project directory with the following content:
 
-
+```bash
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
@@ -12,9 +12,10 @@ build-backend = "setuptools.build_meta"
 [tool.pyls.scripts]
 pyls = "script:main"
 setup.py
+```
 Create a setup.py file in the same directory as pyproject.toml:
 
-
+```bash
 from setuptools import setup
 
 setup(
@@ -29,6 +30,7 @@ setup(
         pyls=script:main
     ''',
 )
+```
 GitHub readme.md
 Create a readme.md file in your project directory with the following content:
 
@@ -46,8 +48,9 @@ This script provides a command-line tool (`pyls`) to print directory structures 
    cd your-repository
 Install the package:
 
-
+```bash
 pip install .
+```
 Usage
 To print directory contents using pyls, run the following command:
 
@@ -63,8 +66,7 @@ Options
 --help: Display help and exit
 Examples:
 
-bash
-Copy code
+
 pyls -A            # Show all files
 pyls -l            # Long listing format
 pyls -t            # Sort by time modified
@@ -106,15 +108,16 @@ Include a LICENSE file (e.g., `LICENSE`) in your project directory with your pre
 
 Now you can install your project using pip:
 
-
+```bash
 pip install .
+```
 
 Verify Installation:
 After installation, you should be able to run the pyls command:
 
-
+``bash
 pyls
-
+```
 You should see the output:
 LICENSE
 README.md
