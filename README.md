@@ -1,7 +1,6 @@
 # Python-pyls
 
-Create pyproject.toml:
-
+**pyproject.toml**
 Create a pyproject.toml file in your project directory with the following content:
 
 toml
@@ -12,16 +11,10 @@ build-backend = "setuptools.build_meta"
 
 [tool.pyls.scripts]
 pyls = "script:main"
-This configuration sets up setuptools as the build backend and defines a script entry point for pyls.
-
-
-
-Create setup.py:
-
+setup.py
 Create a setup.py file in the same directory as pyproject.toml:
 
-python
-Copy code
+
 from setuptools import setup
 
 setup(
@@ -36,18 +29,78 @@ setup(
         pyls=script:main
     ''',
 )
-Install the Package:
+GitHub readme.md
+Create a readme.md file in your project directory with the following content:
 
-Now, you can install your script as a package using pip:
+
+# Python Directory Listing (pyls)
+
+This script provides a command-line tool (`pyls`) to print directory structures based on various options.
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/your-repository.git
+   cd your-repository
+Install the package:
 
 bash
 Copy code
 pip install .
-Run pyls Command:
-
-After installation, you can run your script using the pyls command:
+Usage
+To print directory contents using pyls, run the following command:
 
 bash
 Copy code
-pyls
-This will execute your script.py file and display the directory structure based on the options provided.
+pyls [OPTIONS]
+Options
+-A: Show all files
+-l: Use a long listing format
+-r: Reverse order
+-t: Sort by time modified
+-h: Display sizes in human readable format
+--filter=TYPE: Filter by 'dir' or 'file'
+--help: Display help and exit
+Examples:
+
+bash
+Copy code
+pyls -A            # Show all files
+pyls -l            # Long listing format
+pyls -t            # Sort by time modified
+pyls --filter=dir  # Filter directories
+pyls --help        # Display help
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+Replace `yourusername` and `your-repository` with your GitHub username and repository name, respectively.
+
+### GitHub Files
+
+Make sure your project structure looks like this:
+
+project/
+│
+├── pyproject.toml
+├── setup.py
+├── script.py
+├── structure.json
+├── README.md
+└── LICENSE
+
+
+- `pyproject.toml`: Contains build configuration.
+- `setup.py`: Installs the package using setuptools.
+- `script.py`: Your main script.
+- `structure.json`: Example JSON file with directory structure.
+- `README.md`: GitHub readme with installation and usage instructions.
+- `LICENSE`: License file (e.g., MIT License).
+
+### License
+
+Include a LICENSE file (e.g., `LICENSE`) in your project directory with your preferred license (e.g., MIT License).
+
+This setup will allow users to clone your repository, install your script as a packag
