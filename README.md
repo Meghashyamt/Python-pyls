@@ -101,4 +101,31 @@ project/
 
 Include a LICENSE file (e.g., `LICENSE`) in your project directory with your preferred license (e.g., MIT License).
 
+
+###Install the Project:
+
+Now you can install your project using pip:
+
+
+pip install .
+
+Verify Installation:
+After installation, you should be able to run the pyls command:
+
+
+pyls
+
+You should see the output:
+LICENSE
+README.md
+ast
+go.mod
+lexer
+main.go
+parser
+token
+
+
+
+
 This setup will allow users to clone your repository, install your script as a packag
