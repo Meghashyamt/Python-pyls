@@ -3,8 +3,7 @@
 **pyproject.toml**
 Create a pyproject.toml file in your project directory with the following content:
 
-toml
-Copy code
+
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
@@ -46,14 +45,12 @@ This script provides a command-line tool (`pyls`) to print directory structures 
    cd your-repository
 Install the package:
 
-bash
-Copy code
+
 pip install .
 Usage
 To print directory contents using pyls, run the following command:
 
-bash
-Copy code
+
 pyls [OPTIONS]
 Options
 -A: Show all files
